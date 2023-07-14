@@ -1,0 +1,4 @@
+name: StormMaster
+version: '${project.version}'
+main: net.mov51.stormmaster.StormMaster
+api-version: '1.19'
