@@ -8,6 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.ProjectileHitEvent;
 
+import static net.mov51.stormmaster.StormMaster.depletionMaterial;
+
 public class ProjectileHitEventListener implements Listener {
     @EventHandler
     public void onProjectileHitEvent(ProjectileHitEvent e) {
@@ -33,7 +35,7 @@ public class ProjectileHitEventListener implements Listener {
                 en.getWorld().setThundering(true);
                 en.getWorld().setThunderDuration(en.getWorld().getThunderDuration() + 24000);
                 en.remove();
-                e.getHitBlock().setType(Material.COAL_BLOCK);
+                e.getHitBlock().setType(depletionMaterial);
                 break;
             }
         }
